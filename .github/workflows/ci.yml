@@ -45,7 +45,7 @@ jobs:
       - name: Tag and push
         run: |
           FULL=${{ secrets.DOCKERHUB_USERNAME }}/$IMAGE_NAME
-          docker ??? $IMAGE_NAME:${{ github.sha }} $FULL:${{ github.sha }}
-          docker ??? $IMAGE_NAME:${{ github.sha }} $FULL:latest
-          docker ??? $FULL:${{ github.sha }}
-          docker ??? $FULL:latest 
+          docker tag $IMAGE_NAME:${{ github.sha }} $FULL:${{ github.sha }}
+          docker tag $IMAGE_NAME:${{ github.sha }} $FULL:latest
+          docker push $FULL:${{ github.sha }}
+          docker push $FULL:latest 
