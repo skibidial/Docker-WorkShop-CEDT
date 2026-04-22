@@ -48,4 +48,4 @@ jobs:
           docker ??? $IMAGE_NAME:${{ github.sha }} $FULL:${{ github.sha }}
           docker ??? $IMAGE_NAME:${{ github.sha }} $FULL:latest
           docker ??? $FULL:${{ github.sha }}
-          docker ??? $FULL:latest
+          docker ??? $FULL:latest 
